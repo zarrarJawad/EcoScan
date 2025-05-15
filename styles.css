@@ -1,0 +1,107 @@
+body.dark {
+  @apply bg-gray-900 text-white;
+}
+
+body.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+body.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+
+body.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+body.dark .bg-emerald-50 {
+  @apply bg-gray-900;
+}
+
+body.dark .bg-green-600 {
+  @apply bg-green-700;
+}
+
+body.dark .bg-green-100 {
+  @apply bg-green-900;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.eco-title {
+  @apply text-green-100;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+#result.success {
+  @apply text-green-600 font-semibold animate-fade-in;
+}
+
+#result.error {
+  @apply text-red-500 font-semibold animate-fade-in;
+}
+
+#history li, #achievements li, #leaderboardList li, #guideList li {
+  @apply mb-3 border-b border-green-100 pb-2;
+}
+
+button {
+  @apply transition duration-200;
+}
+
+button:hover {
+  @apply transform scale-105;
+}
+
+.animate-bounce-hover:hover {
+  animation: bounce 0.3s infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.page {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    @apply text-2xl;
+  }
+
+  nav ul {
+    @apply space-x-4;
+  }
+
+  nav ul li a {
+    @apply text-sm;
+  }
+
+  main {
+    @apply px-2;
+  }
+
+  .page {
+    @apply mb-6;
+  }
+}
